@@ -7,9 +7,10 @@ The implementation of the CNN design was schemed as a 3 layers convolution encod
 
 ![image](https://user-images.githubusercontent.com/72237098/130953685-007d2511-210e-4985-9b99-e246036fbefa.png)
 
-The model's training proccess was optimizied by Adam optimizer and the its learning rate has decayed with a proper learning rate scheduler.
+The model's training proccess was optimizied by Adam optimizer and its learning rate has decayed with a proper learning rate scheduler.
 After the training loss had converged to a fine minimum, the test dataset resulted a PSNR value of 30.9\mp1.8\ [dB], which is a fine reconstruction quality for 8 bit images.
 
 The model at work:
+
 ![image](https://user-images.githubusercontent.com/72237098/130953919-da38cf32-4dc1-4561-953a-eb14d3c63a27.png)
 
