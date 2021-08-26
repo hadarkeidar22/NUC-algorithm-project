@@ -22,7 +22,7 @@ if not os.path.exists('./denoised_images'):
 num_epochs = 2
 batch_size = 1
 learning_rate = 0.0008
-img_dir = r'C:\Users\Hadar Keidar\Desktop\לימודים  ארכיון\שנה ד סמסטר א\פרוייקט\finish_line\small_training'
+img_dir = r'path'
 
 def plot_sample_img(img, name):
     img = img.view(1, 28, 28)
