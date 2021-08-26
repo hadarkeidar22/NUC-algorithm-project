@@ -18,8 +18,8 @@ LABEL = 'label'
 FPN = 'FPN'
 
 batch_size = 1
-img_dir = r'C:\Users\Hadar Keidar\Desktop\לימודים  ארכיון\שנה ד סמסטר א\פרוייקט\finish_line\small_test'
-noise_dic = r'C:\Users\Hadar Keidar\Desktop\לימודים  ארכיון\שנה ד סמסטר א\פרוייקט\finish_line\noise.png'
+img_dir = r'path'
+noise_dic = r'path'
 testset = MyDataset(img_dir=img_dir, transforms=myTransforms)
 testloader = DataLoader(testset, batch_size=batch_size, shuffle=True)
 
@@ -50,12 +50,6 @@ with torch.no_grad():
         loss_values.append(loss.data.item())
         if (index > 15):
             last_10_mean_loss_values.append(np.mean(loss_values[-13:-1]))
-        '''x = to_img(orig_image.cpu().data[0])
-        save_image(x, './img_4_report/x_orig'+str(index)+'.png')
-        #x_noise = to_img(noised_image[0])
-        save_image(noised_image, './img_4_report/x_noised_'+str(index)+'.png')
-        x_hat = to_img(output.cpu().data[0])
-        save_image(x_hat, './img_4_report/x_hat_'+str(index)+'.png')'''
 
 plt.plot(last_10_mean_loss_values)
 plt.title("testing MSE Loss [gs]")
